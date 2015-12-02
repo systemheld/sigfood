@@ -33,28 +33,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hauptgericht" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-vk-IAH">
-                                                    <rect key="frame" x="168" y="28" width="424" height="114"/>
+                                                    <rect key="frame" x="118" y="53" width="474" height="64"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceStud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOQ-wY-ZG0">
-                                                    <rect key="frame" x="168" y="147" width="55" height="15"/>
+                                                    <rect key="frame" x="118" y="122" width="55" height="15"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceGuest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nra-gk-MTa">
-                                                    <rect key="frame" x="530" y="147" width="62" height="15"/>
+                                                    <rect key="frame" x="530" y="122" width="62" height="15"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="observe-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSS-Ar-hHW" userLabel="star1">
-                                                    <rect key="frame" x="168" y="12" width="16" height="16"/>
+                                                    <rect key="frame" x="118" y="37" width="16" height="16"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="cXl-Rx-36g"/>
@@ -62,7 +62,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="observe-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxt-7s-myn" userLabel="star2">
-                                                    <rect key="frame" x="187" y="12" width="16" height="16"/>
+                                                    <rect key="frame" x="137" y="37" width="16" height="16"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="6Jw-SU-jCx"/>
@@ -70,7 +70,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="observe-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-Cd-Iyc" userLabel="star4">
-                                                    <rect key="frame" x="225" y="12" width="16" height="16"/>
+                                                    <rect key="frame" x="175" y="37" width="16" height="16"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="UnD-iM-HdA"/>
@@ -78,12 +78,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nopictureavailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="FZy-xU-6I9" userLabel="image">
-                                                    <rect key="frame" x="8" y="12" width="150" height="150"/>
+                                                    <rect key="frame" x="8" y="37" width="100" height="100"/>
                                                     <animations/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="AgV-Sw-q74"/>
                                                         <constraint firstAttribute="width" secondItem="FZy-xU-6I9" secondAttribute="height" multiplier="1:1" id="fWm-3X-s93"/>
                                                         <constraint firstAttribute="width" constant="92" id="jId-LN-amv"/>
                                                         <constraint firstAttribute="height" constant="92" id="uKX-pB-VvE"/>
+                                                        <constraint firstAttribute="width" constant="100" id="yD7-9g-vqv"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -93,14 +95,14 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceStaff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkS-uz-TMS">
-                                                    <rect key="frame" x="352" y="147" width="56" height="15"/>
+                                                    <rect key="frame" x="327" y="122" width="56" height="15"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="observe-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="oCx-g7-MxI" userLabel="star5">
-                                                    <rect key="frame" x="244" y="12" width="16" height="16"/>
+                                                    <rect key="frame" x="194" y="37" width="16" height="16"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="2og-kq-r9m"/>
@@ -194,7 +196,7 @@
                                                     <animations/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="observe-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="aX8-ZP-s6F" userLabel="star3">
-                                                    <rect key="frame" x="206" y="12" width="16" height="16"/>
+                                                    <rect key="frame" x="156" y="37" width="16" height="16"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="Xhw-4c-poP"/>
@@ -202,7 +204,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-KG-Eyu">
-                                                    <rect key="frame" x="8" y="12" width="150" height="150"/>
+                                                    <rect key="frame" x="8" y="37" width="100" height="100"/>
                                                     <animations/>
                                                     <connections>
                                                         <action selector="showImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSL-jB-gFH"/>
@@ -310,6 +312,7 @@
                                                     <exclude reference="7Gw-yQ-neJ"/>
                                                     <exclude reference="AbS-XQ-oEo"/>
                                                     <exclude reference="O71-Oa-7fb"/>
+                                                    <exclude reference="WEw-mJ-efK"/>
                                                     <exclude reference="piq-LL-fmF"/>
                                                     <exclude reference="DVg-Lm-lQd"/>
                                                     <exclude reference="HbA-bv-J8H"/>

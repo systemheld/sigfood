@@ -13,17 +13,17 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="web_hi_res_512" translatesAutoresizingMaskIntoConstraints="NO" id="kah-hq-tyu">
-                    <rect key="frame" x="10" y="10" width="460" height="460"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="web_hi_res_512" translatesAutoresizingMaskIntoConstraints="NO" id="kah-hq-tyu">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="512" id="Pmh-kO-WZF"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="512" id="iFD-0T-CiZ"/>
-                        <constraint firstAttribute="width" secondItem="kah-hq-tyu" secondAttribute="height" multiplier="1:1" id="o6w-of-GgL"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="512" id="ROT-V1-6hm"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="512" id="fyK-rt-9f5"/>
+                        <constraint firstAttribute="width" secondItem="kah-hq-tyu" secondAttribute="height" multiplier="1:1" id="lg8-I9-3zb"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2014 Kett, Oliver. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  iOS App by Oliver Kett" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="151" y="459" width="179" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,6 +41,9 @@
             <color key="backgroundColor" red="0.015686274509803921" green="0.70980392156862748" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="kah-hq-tyu" secondAttribute="bottom" constant="10" id="8PD-7d-aGi"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerY" secondItem="kah-hq-tyu" secondAttribute="centerY" id="BfG-ex-bp2"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kah-hq-tyu" secondAttribute="trailing" id="C4X-mk-GEY"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kah-hq-tyu" secondAttribute="trailing" constant="10" id="D9j-oG-4dp"/>
                 <constraint firstItem="kah-hq-tyu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Daz-mT-IV9"/>
                 <constraint firstItem="kah-hq-tyu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Fac-H9-LvO"/>
@@ -49,29 +52,55 @@
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="bottom" secondItem="kah-hq-tyu" secondAttribute="bottom" id="Q3m-mu-edz"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kah-hq-tyu" secondAttribute="bottom" constant="10" id="RuO-JP-dhz"/>
+                <constraint firstItem="kah-hq-tyu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="UxM-uP-Pkw"/>
                 <constraint firstItem="kah-hq-tyu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wwe-Qj-N98"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstItem="kah-hq-tyu" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZRq-1P-NPR"/>
+                <constraint firstItem="kah-hq-tyu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="d5F-Bm-wDg"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kah-hq-tyu" secondAttribute="bottom" id="e1K-8R-k9O"/>
+                <constraint firstItem="kah-hq-tyu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eTw-Vz-dt5"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
                 <constraint firstItem="kah-hq-tyu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l1K-Uy-Fta"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="kah-hq-tyu" secondAttribute="bottom" constant="71" id="n26-cU-T0Q"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="kah-hq-tyu" secondAttribute="centerX" id="qfN-bT-PDk"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerY" secondItem="kah-hq-tyu" secondAttribute="centerY" id="tpO-Z4-KiX"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerY" secondItem="kah-hq-tyu" secondAttribute="centerY" id="uL5-OH-mnG"/>
                 <constraint firstItem="kah-hq-tyu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vI2-uN-9b4"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="kah-hq-tyu" secondAttribute="centerX" id="zHP-8j-f0W"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="8ie-xW-0ye"/>
                     <exclude reference="kId-c2-rCX"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="n26-cU-T0Q"/>
+                    <exclude reference="5cJ-9S-tgC"/>
+                    <exclude reference="Koa-jz-hwk"/>
+                    <exclude reference="fvb-Df-36g"/>
+                    <exclude reference="D9j-oG-4dp"/>
+                    <exclude reference="Daz-mT-IV9"/>
+                    <exclude reference="Fac-H9-LvO"/>
+                    <exclude reference="KDK-pB-2kM"/>
                     <exclude reference="Klq-Qh-7eE"/>
+                    <exclude reference="RuO-JP-dhz"/>
                     <exclude reference="Wwe-Qj-N98"/>
+                    <exclude reference="l1K-Uy-Fta"/>
                     <exclude reference="vI2-uN-9b4"/>
+                    <exclude reference="8PD-7d-aGi"/>
+                    <exclude reference="BfG-ex-bp2"/>
+                    <exclude reference="Kzo-t9-V3l"/>
+                    <exclude reference="MfP-vx-nX0"/>
+                    <exclude reference="ZEH-qu-HZ9"/>
+                    <exclude reference="n26-cU-T0Q"/>
+                    <exclude reference="tpO-Z4-KiX"/>
+                    <exclude reference="uL5-OH-mnG"/>
+                    <exclude reference="zHP-8j-f0W"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="560" y="558"/>
         </view>
     </objects>
     <resources>
