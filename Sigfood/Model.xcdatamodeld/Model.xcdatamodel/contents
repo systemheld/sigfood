@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="Comment" representedClassName=".Comment" syncable="YES">
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="menuRef" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Menu" inverseName="commentRef" inverseEntity="Menu" syncable="YES"/>
+    </entity>
+    <entity name="Menu" representedClassName=".Menu" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="garnish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imageID" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainCourse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceEmployee" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceGuest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceStudent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="commentRef" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="menuRef" inverseEntity="Comment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Comment" positionX="144" positionY="-18" width="128" height="103"/>
+        <element name="Menu" positionX="-63" positionY="-18" width="128" height="195"/>
+    </elements>
+</model>
