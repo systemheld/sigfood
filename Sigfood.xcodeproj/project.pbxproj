@@ -240,7 +240,7 @@
 				TargetAttributes = {
 					D6E9E67C19DAC94000BCAD1F = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 37GBF4J92D;
+						DevelopmentTeam = C8F68RFW4L;
 					};
 					D6E9E69119DAC94000BCAD1F = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -444,7 +444,7 @@
 				INFOPLIST_FILE = Sigfood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.sigfood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sigfood/ObjC-bridge.h";
@@ -459,7 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sigfood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.sigfood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sigfood/ObjC-bridge.h";
