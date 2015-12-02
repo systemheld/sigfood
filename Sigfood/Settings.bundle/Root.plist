@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>StringsTable</key>
+		<string>Root</string>
+		<key>PreferenceSpecifiers</key>
+		<array>
+			<dict>
+				<key>Type</key>
+				<string>PSGroupSpecifier</string>
+				<key>Title</key>
+				<string>Acknowledgements</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>PSChildPaneSpecifier</string>
+				<key>Title</key>
+				<string>SWXMLHash</string>
+				<key>File</key>
+				<string>Acknowledgement-SWXMLHash</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>PSChildPaneSpecifier</string>
+				<key>Title</key>
+				<string>Material Design Icons</string>
+				<key>File</key>
+				<string>Acknowledgement-material-design-icons</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>PSChildPaneSpecifier</string>
+				<key>Title</key>
+				<string>Android Asset Studio</string>
+				<key>File</key>
+				<string>Acknowledgement-android-asset-studio</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>PSChildPaneSpecifier</string>
+				<key>Title</key>
+				<string>NSString+HTML</string>
+				<key>File</key>
+				<string>Acknowledgement-nsstring-html</string>
+			</dict>
+            <dict>
+                <key>Type</key>
+                <string>PSChildPaneSpecifier</string>
+                <key>Title</key>
+                <string>SwiftSpinner</string>
+                <key>File</key>
+                <string>Acknowledgement-SwiftSpinner</string>
+            </dict>
+		</array>
+	</dict>
+</plist>

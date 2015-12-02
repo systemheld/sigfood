@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>ThirdPartyLicenses</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>App Icon was created with Android Asset Studio (https://appmaker.merq.org) and is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/3.0/)</string>
+		</dict>
+	</array>
+</dict>
+</plist>
