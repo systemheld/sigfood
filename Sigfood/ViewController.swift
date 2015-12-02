@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Kett, Oliver. All rights reserved.
 //
 
+// todo: 
+// * delete menu older than 14 days
+// * mark food without pork and veggie food
+// * upload fotos and write comments
+
 import UIKit
 import CoreData
 
@@ -35,8 +40,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.addSubview(refreshControl)
         
         updateUITableView(force: false)
-        
-        // todo: delete menu older than 14 days
     }
     
     override func didReceiveMemoryWarning() {
