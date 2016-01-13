@@ -7,7 +7,6 @@
 //
 
 // todo: 
-// * delete menu older than 14 days
 // * mark food without pork and veggie food
 // * upload fotos and write comments
 
@@ -39,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.refreshControl.addTarget(self, action: "forceUpdateDatabase", forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
         
+        cleanDatabaseForThreshold(7)
         updateUITableView(force: false)
     }
     
@@ -164,13 +164,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    // MARK: fetch and update Database
+    
     // there should be a cleaner way to do this
     func forceUpdateDatabase() {
         updateUITableView(force: true)
         self.refreshControl.endRefreshing()
     }
     
-    // MARK: fetch and update Database
     func updateUITableView(force force: Bool) {
         // set force to true to update every time
         NSOperationQueue().addOperationWithBlock {
@@ -336,6 +337,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }
-
+    
+    func cleanDatabaseForThreshold(threshold: Double) {
+        Log("threshold is \(String(threshold))")
+        let thresholdInSeconds = threshold * self.oneDayinSeconds
+        let calendar = NSCalendar.currentCalendar()
+        
+        let threshold = calendar.components([.Year, .Month, .Day], fromDate: self.date.dateByAddingTimeInterval(-thresholdInSeconds))
+        let normalizedThreshold = calendar.dateFromComponents(threshold)
+        
+        let fetchRequest = NSFetchRequest(entityName: "Menu")
+        fetchRequest.predicate = NSPredicate(format: "date < %@", normalizedThreshold!)
+        
+        do {
+            let result = try self.context.executeFetchRequest(fetchRequest) as! [Menu]
+            result.forEach({ dish in
+                self.context.deleteObject(dish)
+            })
+            try self.context.save()
+        } catch {
+            Log("Error: \(error)")
+        }
+    }
 }
 
