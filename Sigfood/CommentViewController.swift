@@ -24,6 +24,8 @@ class CommentViewController: UITableViewController {
         
         let fetchRequest = NSFetchRequest(entityName: "Comment")
         fetchRequest.predicate = NSPredicate(format: "menuRef = %@", menu!)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
+        
         do {
             data = try context.executeFetchRequest(fetchRequest) as! [Comment]
         } catch {
