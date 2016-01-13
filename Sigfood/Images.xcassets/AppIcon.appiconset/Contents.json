@@ -71,6 +71,12 @@
       "idiom" : "ipad",
       "filename" : "web_hi_res_1024-76@2x.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "AppIcon83,5@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
