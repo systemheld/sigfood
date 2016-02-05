@@ -7,7 +7,6 @@
 //
 
 // todo: 
-// * mark food without pork and veggie food
 // * upload fotos and write comments
 
 import UIKit
@@ -72,7 +71,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // no dishes found
         if self.data == [] {
-            return tableView.dequeueReusableCellWithIdentifier("emptyCell")!
+            let cell = tableView.dequeueReusableCellWithIdentifier("emptyCell")!
+            let weekday = NSCalendar.currentCalendar().component(.Weekday, fromDate: self.date)
+            if (weekday == 1) || (weekday == 7) {
+                cell.textLabel?.text = "Es ist Wochenende und die Mensa hat geschlossen!"
+            } else {
+                cell.textLabel?.text = "Es konnte kein Speiseplan gefunden werdem. Ziehe nach unten, um zu aktualisieren."
+            }
+            return cell
         }
         
         // if we have dishes
@@ -84,38 +90,55 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.priceStud.text = row.priceStudent
         cell.priceStaff.text = row.priceEmployee
         
+        let emojiGenerator = EmojiImageGenerator()
+        if row.veggie == true {
+            cell.veggie.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.apple, size: 64.0)
+        } else {
+            cell.veggie.image = UIImage()
+        }
+        if row.beef == true {
+            cell.beef.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.cow, size: 64.0)
+        } else {
+            cell.beef.image = UIImage()
+        }
+        if row.withoutPork == true {
+            cell.pork.image = emojiGenerator.prohibitedImage(EmojiImageGenerator.emoji.pig, size: 64.0)
+        } else {
+            cell.pork.image = UIImage()
+        }
+        
         if row.image != nil {
             cell.foodImage.image = UIImage(data: row.image!)
         } else {
-            cell.foodImage.image = UIImage(named: "nopictureavailable.png")
+            cell.foodImage.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_questionmark, size: 512.0)
         }
         cell.foodImage.clipsToBounds = true
         cell.foodImage.contentMode = .ScaleAspectFill
         
         if row.score?.doubleValue > 0.5 {
-            cell.star1.image = UIImage(named: "observe.png)")
+            cell.star1.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.star, size: 64.0)
         } else {
-            cell.star1.image = UIImage(named: "observe-grey.png")
+            cell.star1.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_star, size: 64.0)
         }
         if row.score?.doubleValue > 1.5 {
-            cell.star2.image = UIImage(named: "observe.png)")
+            cell.star2.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.star, size: 64.0)
         } else {
-            cell.star2.image = UIImage(named: "observe-grey.png")
+            cell.star2.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_star, size: 64.0)
         }
         if row.score?.doubleValue > 2.5 {
-            cell.star3.image = UIImage(named: "observe.png)")
+            cell.star3.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.star, size: 64.0)
         } else {
-            cell.star3.image = UIImage(named: "observe-grey.png")
+            cell.star3.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_star, size: 64.0)
         }
         if row.score?.doubleValue > 3.5 {
-            cell.star4.image = UIImage(named: "observe.png)")
+            cell.star4.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.star, size: 64.0)
         } else {
-            cell.star4.image = UIImage(named: "observe-grey.png")
+            cell.star4.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_star, size: 64.0)
         }
         if row.score?.doubleValue > 4.5 {
-            cell.star5.image = UIImage(named: "observe.png)")
+            cell.star5.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.star, size: 64.0)
         } else {
-            cell.star5.image = UIImage(named: "observe-grey.png")
+            cell.star5.image = emojiGenerator.imageWithEmoji(EmojiImageGenerator.emoji.white_star, size: 64.0)
         }
         
         return cell
@@ -211,6 +234,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             let fetchRequest = NSFetchRequest(entityName: "Menu")
             fetchRequest.predicate = NSPredicate(format: "(date > %@) AND (date < %@)", normalizedToday!, normalizedTomorrow!)
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "mainCourse", ascending: true)]
             
             result = try self.context.executeFetchRequest(fetchRequest) as! [Menu]
             return result
@@ -261,6 +285,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 dish.mainCourse = mainCourse
             }
             
+            // veggie, Beef, without Pork
+            if mensaessen[index].element?.attributes["vegetarisch"] == "true" {
+                dish.veggie = true
+            } else {
+                dish.veggie = false
+            }
+            if mensaessen[index].element?.attributes["rind"] == "true" {
+                dish.beef = true
+            } else {
+                dish.beef = false
+            }
+            if mensaessen[index].element?.attributes["moslem"] == "true" {
+                dish.withoutPork = true
+            } else {
+                dish.withoutPork = false
+            }
+            
+            // score
             if let averageScore = mensaessen[index]["hauptgericht"]["bewertung"]["schnitt"].element?.text {
                 dish.score = NSString(string: averageScore).doubleValue
             } else {
@@ -325,6 +367,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
             }
         }
+        
         do {
             try self.context.save()
         } catch {
