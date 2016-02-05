@@ -13,7 +13,8 @@ import Foundation
 import CoreData
 
 extension Menu {
-
+    
+    @NSManaged var beef: NSNumber?
     @NSManaged var date: NSDate?
     @NSManaged var garnish: String?
     @NSManaged var image: NSData?
@@ -24,5 +25,7 @@ extension Menu {
     @NSManaged var score: NSNumber?
     @NSManaged var imageID: NSNumber?
     @NSManaged var commentRef: NSSet?
+    @NSManaged var veggie: NSNumber?
+    @NSManaged var withoutPork: NSNumber?
 
 }

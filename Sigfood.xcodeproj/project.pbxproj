@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D612B4B81C0F13DA00395C67 /* nopictureavailable.png in Resources */ = {isa = PBXBuildFile; fileRef = D612B4B71C0F13DA00395C67 /* nopictureavailable.png */; };
+		D61345B11C639CB300524B7F /* EmojiImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61345B01C639CB300524B7F /* EmojiImageGenerator.swift */; };
 		D61F7ABC1AA05F57003E2A3E /* String+htmlencodedstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7ABB1AA05F57003E2A3E /* String+htmlencodedstring.swift */; };
 		D61F7ABF1AA09CEE003E2A3E /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D61F7ABE1AA09CEE003E2A3E /* NSString+HTML.m */; };
 		D63B80FB1C0C25C40021AE1B /* Menu+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63B80F71C0C25C40021AE1B /* Menu+CoreDataProperties.swift */; };
@@ -20,31 +20,17 @@
 		D64EC81E19E295210091EB1E /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64EC81D19E295210091EB1E /* SWXMLHash.swift */; };
 		D65A57131C05E89E00CC5BD1 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */; };
 		D65A86F51C05BD6E00AD77BA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A86F41C05BD6E00AD77BA /* Log.swift */; };
-		D665E1A31BD122C900E06A09 /* nophotoavailable.png in Resources */ = {isa = PBXBuildFile; fileRef = D665E1A21BD122C900E06A09 /* nophotoavailable.png */; };
 		D69339831BFA0A6B006B6A22 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69339821BFA0A6B006B6A22 /* CommentViewController.swift */; };
 		D6A2396A1BFE144200F5520B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6A239681BFE144200F5520B /* Model.xcdatamodeld */; };
-		D6A9D9361BD7BF4C0064CA6A /* observe-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A9D9341BD7BF4C0064CA6A /* observe-grey.png */; };
-		D6A9D9371BD7BF4C0064CA6A /* observe.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A9D9351BD7BF4C0064CA6A /* observe.png */; };
 		D6E9E68319DAC94000BCAD1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9E68219DAC94000BCAD1F /* AppDelegate.swift */; };
 		D6E9E68519DAC94000BCAD1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9E68419DAC94000BCAD1F /* ViewController.swift */; };
 		D6E9E68819DAC94000BCAD1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9E68619DAC94000BCAD1F /* Main.storyboard */; };
 		D6E9E68D19DAC94000BCAD1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E9E68B19DAC94000BCAD1F /* LaunchScreen.xib */; };
-		D6E9E69919DAC94000BCAD1F /* SigfoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9E69819DAC94000BCAD1F /* SigfoodTests.swift */; };
 		D6FD79F71AA6F119004F233A /* SigfoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD79F61AA6F119004F233A /* SigfoodCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D6E9E69319DAC94000BCAD1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D6E9E67519DAC94000BCAD1F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D6E9E67C19DAC94000BCAD1F;
-			remoteInfo = Sigfood;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		D612B4B71C0F13DA00395C67 /* nopictureavailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nopictureavailable.png; sourceTree = "<group>"; };
+		D61345B01C639CB300524B7F /* EmojiImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiImageGenerator.swift; sourceTree = "<group>"; };
 		D61F7ABB1AA05F57003E2A3E /* String+htmlencodedstring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+htmlencodedstring.swift"; sourceTree = "<group>"; };
 		D61F7ABD1AA09CEE003E2A3E /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		D61F7ABE1AA09CEE003E2A3E /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
@@ -58,34 +44,22 @@
 		D64EC81D19E295210091EB1E /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		D65A86F41C05BD6E00AD77BA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		D665E1A21BD122C900E06A09 /* nophotoavailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nophotoavailable.png; sourceTree = "<group>"; };
 		D69339821BFA0A6B006B6A22 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		D6A239691BFE144200F5520B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		D6A9D9341BD7BF4C0064CA6A /* observe-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "observe-grey.png"; sourceTree = "<group>"; };
-		D6A9D9351BD7BF4C0064CA6A /* observe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = observe.png; sourceTree = "<group>"; };
 		D6E9E67D19DAC94000BCAD1F /* Sigfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E9E68119DAC94000BCAD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E9E68219DAC94000BCAD1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6E9E68419DAC94000BCAD1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6E9E68719DAC94000BCAD1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6E9E68C19DAC94000BCAD1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D6E9E69219DAC94000BCAD1F /* SigfoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigfoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6E9E69719DAC94000BCAD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6E9E69819DAC94000BCAD1F /* SigfoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigfoodTests.swift; sourceTree = "<group>"; };
 		D6E9E6A619DAC9A700BCAD1F /* ObjC-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-bridge.h"; sourceTree = "<group>"; };
 		D6E9E6C419DACB9D00BCAD1F /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
+		D6ECB8581C64C7BF0019EABF /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		D6FD79F61AA6F119004F233A /* SigfoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigfoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D6E9E67A19DAC94000BCAD1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D6E9E68F19DAC94000BCAD1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -118,6 +92,7 @@
 				D64EC81D19E295210091EB1E /* SWXMLHash.swift */,
 				D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */,
 				D65A86F41C05BD6E00AD77BA /* Log.swift */,
+				D61345B01C639CB300524B7F /* EmojiImageGenerator.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -128,7 +103,6 @@
 				D6E9E68B19DAC94000BCAD1F /* LaunchScreen.xib */,
 				D6E9E68619DAC94000BCAD1F /* Main.storyboard */,
 				D6E9E67F19DAC94000BCAD1F /* Sigfood */,
-				D6E9E69519DAC94000BCAD1F /* SigfoodTests */,
 				D6E9E67E19DAC94000BCAD1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				D6E9E67D19DAC94000BCAD1F /* Sigfood.app */,
-				D6E9E69219DAC94000BCAD1F /* SigfoodTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,10 +125,6 @@
 				D63B80FF1C0C50090021AE1B /* SigfoodImageViewController.swift */,
 				D65A86F61C05DB3C00AD77BA /* CoreData */,
 				D65A86F71C05DB5500AD77BA /* lib */,
-				D665E1A21BD122C900E06A09 /* nophotoavailable.png */,
-				D612B4B71C0F13DA00395C67 /* nopictureavailable.png */,
-				D6A9D9341BD7BF4C0064CA6A /* observe-grey.png */,
-				D6A9D9351BD7BF4C0064CA6A /* observe.png */,
 				D6E9E6C419DACB9D00BCAD1F /* Test.playground */,
 				D64065461BFCA5FA00980D11 /* Images.xcassets */,
 				D640654A1BFCCF8800980D11 /* Settings.bundle */,
@@ -168,23 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				D6E9E68119DAC94000BCAD1F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D6E9E69519DAC94000BCAD1F /* SigfoodTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6E9E69819DAC94000BCAD1F /* SigfoodTests.swift */,
-				D6E9E69619DAC94000BCAD1F /* Supporting Files */,
-			);
-			path = SigfoodTests;
-			sourceTree = "<group>";
-		};
-		D6E9E69619DAC94000BCAD1F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D6E9E69719DAC94000BCAD1F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,24 +161,6 @@
 			productReference = D6E9E67D19DAC94000BCAD1F /* Sigfood.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D6E9E69119DAC94000BCAD1F /* SigfoodTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D6E9E69F19DAC94000BCAD1F /* Build configuration list for PBXNativeTarget "SigfoodTests" */;
-			buildPhases = (
-				D6E9E68E19DAC94000BCAD1F /* Sources */,
-				D6E9E68F19DAC94000BCAD1F /* Frameworks */,
-				D6E9E69019DAC94000BCAD1F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D6E9E69419DAC94000BCAD1F /* PBXTargetDependency */,
-			);
-			name = SigfoodTests;
-			productName = SigfoodTests;
-			productReference = D6E9E69219DAC94000BCAD1F /* SigfoodTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,10 +175,6 @@
 					D6E9E67C19DAC94000BCAD1F = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = C8F68RFW4L;
-					};
-					D6E9E69119DAC94000BCAD1F = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = D6E9E67C19DAC94000BCAD1F;
 					};
 				};
 			};
@@ -262,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				D6E9E67C19DAC94000BCAD1F /* Sigfood */,
-				D6E9E69119DAC94000BCAD1F /* SigfoodTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,21 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A9D9371BD7BF4C0064CA6A /* observe.png in Resources */,
 				D6E9E68819DAC94000BCAD1F /* Main.storyboard in Resources */,
-				D6A9D9361BD7BF4C0064CA6A /* observe-grey.png in Resources */,
-				D612B4B81C0F13DA00395C67 /* nopictureavailable.png in Resources */,
 				D64065471BFCA5FA00980D11 /* Images.xcassets in Resources */,
 				D6E9E68D19DAC94000BCAD1F /* LaunchScreen.xib in Resources */,
-				D665E1A31BD122C900E06A09 /* nophotoavailable.png in Resources */,
 				D640654B1BFCCF8800980D11 /* Settings.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D6E9E69019DAC94000BCAD1F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +217,7 @@
 			files = (
 				D69339831BFA0A6B006B6A22 /* CommentViewController.swift in Sources */,
 				D63B81001C0C50090021AE1B /* SigfoodImageViewController.swift in Sources */,
+				D61345B11C639CB300524B7F /* EmojiImageGenerator.swift in Sources */,
 				D63B80FB1C0C25C40021AE1B /* Menu+CoreDataProperties.swift in Sources */,
 				D6E9E68519DAC94000BCAD1F /* ViewController.swift in Sources */,
 				D63B80FE1C0C25C40021AE1B /* Comment.swift in Sources */,
@@ -315,23 +234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6E9E68E19DAC94000BCAD1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D6E9E69919DAC94000BCAD1F /* SigfoodTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D6E9E69419DAC94000BCAD1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D6E9E67C19DAC94000BCAD1F /* Sigfood */;
-			targetProxy = D6E9E69319DAC94000BCAD1F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6E9E68619DAC94000BCAD1F /* Main.storyboard */ = {
@@ -466,42 +369,6 @@
 			};
 			name = Release;
 		};
-		D6E9E6A019DAC94000BCAD1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SigfoodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sigfood.app/Sigfood";
-			};
-			name = Debug;
-		};
-		D6E9E6A119DAC94000BCAD1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SigfoodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sigfood.app/Sigfood";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,24 +390,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6E9E69F19DAC94000BCAD1F /* Build configuration list for PBXNativeTarget "SigfoodTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D6E9E6A019DAC94000BCAD1F /* Debug */,
-				D6E9E6A119DAC94000BCAD1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
 		D6A239681BFE144200F5520B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D6ECB8581C64C7BF0019EABF /* Model 2.xcdatamodel */,
 				D6A239691BFE144200F5520B /* Model.xcdatamodel */,
 			);
-			currentVersion = D6A239691BFE144200F5520B /* Model.xcdatamodel */;
+			currentVersion = D6ECB8581C64C7BF0019EABF /* Model 2.xcdatamodel */;
 			name = Model.xcdatamodeld;
 			path = Sigfood/Model.xcdatamodeld;
 			sourceTree = "<group>";
