@@ -23,6 +23,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // now
     var date = NSDate()
     let oneDayinSeconds: Double = 24 * 60 * 60
+    // store users chosen locale for date formatting in header
+    let calendar = NSCalendar.currentCalendar()
+    let formatter = NSDateFormatter()
     
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext // CoreData
     var data = [Menu]()
@@ -36,6 +39,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.refreshControl.tintColor = UIColor(red: 0.016, green: 0.710, blue: 0.788, alpha: 1.00)
         self.refreshControl.addTarget(self, action: "forceUpdateDatabase", forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
+        
+        //setup date format with users
+        self.formatter.locale = NSLocale.currentLocale()
+        self.formatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("E ddMMyy", options: 0, locale: NSLocale.currentLocale())
         
         cleanDatabaseForThreshold(7)
         updateUITableView(force: false)
@@ -72,7 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // no dishes found
         if self.data == [] {
             let cell = tableView.dequeueReusableCellWithIdentifier("emptyCell")!
-            let weekday = NSCalendar.currentCalendar().component(.Weekday, fromDate: self.date)
+            let weekday = self.calendar.component(.Weekday, fromDate: self.date)
             if (weekday == 1) || (weekday == 7) {
                 cell.textLabel?.text = "Es ist Wochenende und die Mensa hat geschlossen!"
             } else {
@@ -213,8 +220,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             // back on the main Queue we update the header and load the Cells
             NSOperationQueue.mainQueue().addOperationWithBlock {
-                // update header
-                self.navItem.title = "\(NSCalendar.currentCalendar().component(.Day, fromDate: self.date)).\(NSCalendar.currentCalendar().component(.Month, fromDate: self.date)).\(NSCalendar.currentCalendar().component(.Year, fromDate: self.date))"
+                self.navItem.title = self.formatter.stringFromDate(self.date)
                 // reload tableView
                 self.tableView.reloadData()
             }
