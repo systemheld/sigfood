@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qlt-cq-Q8R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qlt-cq-Q8R">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -502,12 +502,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="1.1.1970" id="tAR-lj-Ebi">
+                    <navigationItem key="navigationItem" id="tAR-lj-Ebi">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="osk-pJ-JH3">
                             <connections>
                                 <action selector="showPrevious:" destination="BYZ-38-t0r" id="az4-E4-m0t"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fCS-9K-gRg">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="1.1.1970"/>
+                            <connections>
+                                <action selector="buttonSetDateToToday:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xbw-yr-2c9"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="TUg-j7-g2g">
                             <connections>
                                 <action selector="showNext:" destination="BYZ-38-t0r" id="Je4-mN-SqV"/>
@@ -515,6 +525,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonDate" destination="fCS-9K-gRg" id="ori-dQ-0r5"/>
                         <outlet property="navItem" destination="tAR-lj-Ebi" id="97D-WI-cVI"/>
                         <outlet property="tableView" destination="ZV1-9I-hGf" id="ta3-Oh-Aev"/>
                         <segue destination="fVA-tj-KwF" kind="presentation" identifier="picture" id="0Kx-UX-2oh"/>

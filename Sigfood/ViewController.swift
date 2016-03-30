@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var buttonDate: UIButton!
     
     // pull to refresh
     var refreshControl = UIRefreshControl()
@@ -55,6 +56,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func showPrevious(sender: AnyObject) {
         self.date = self.date.dateByAddingTimeInterval(-oneDayinSeconds)
+        updateUITableView(force: false)
+    }
+    @IBAction func buttonSetDateToToday(sender: UIButton, forEvent event: UIEvent) {
+        self.date = NSDate()
         updateUITableView(force: false)
     }
     
@@ -220,7 +225,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             // back on the main Queue we update the header and load the Cells
             NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.navItem.title = self.formatter.stringFromDate(self.date)
+                self.buttonDate.setTitle(self.formatter.stringFromDate(self.date), forState: .Normal)
                 // reload tableView
                 self.tableView.reloadData()
             }
