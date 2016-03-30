@@ -274,7 +274,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let url = NSURL(string: "https://www.sigfood.de/?do=api.gettagesplan&datum=\(year)-\(month)-\(day)")!
         Log("url: \(url)")
-        guard let data = NSData(contentsOfURL: url) else { return }
+        guard let data = NSData(contentsOfURL: url) else {
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                SwiftSpinner.hide()
+                let alert = UIAlertController(title: "That escalated quickly", message: "Es gab einen Fehler beim Abruf der Daten von sigfood.de.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            return
+        }
         
         let mensaessen = SWXMLHash.parse(data)["Mensa"]["Tagesmenue"]["Mensaessen"]
         
