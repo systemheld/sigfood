@@ -8,7 +8,7 @@
 
 import Foundation
 
-func Log(message: String, filename: StaticString = __FILE__, function: StaticString = __FUNCTION__, line: UInt = __LINE__) {
+func Log(message: String, filename: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
     #if DEBUG
         let file = NSURL(fileURLWithPath: String(filename)).lastPathComponent ?? String()
         NSLog("[\(file):\(line)] \(function) - \(message)")
