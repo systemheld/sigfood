@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.rowHeight = UITableViewAutomaticDimension
         
         self.refreshControl.tintColor = UIColor(red: 0.016, green: 0.710, blue: 0.788, alpha: 1.00)
-        self.refreshControl.addTarget(self, action: "forceUpdateDatabase", forControlEvents: .ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(ViewController.forceUpdateDatabase), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
         
         //setup date format with users
