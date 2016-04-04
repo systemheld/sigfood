@@ -1,0 +1,11 @@
+/* 
+  Localized.strings
+  Sigfood
+
+  Created by Kett, Oliver on 04.04.16.
+  Copyright © 2016 Kett, Oliver. All rights reserved.
+*/
+
+"error.httpfetch.title" = "Ups...";
+"error.httpfetch.message" = "Es gab einen Fehler beim Abruf der Daten von sigfood.de.";
+"error.httpfetch.button" = "Ok";

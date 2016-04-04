@@ -1,0 +1,26 @@
+
+/* Class = "UILabel"; text = "Hauptgericht"; ObjectID = "6Nl-vk-IAH"; */
+"6Nl-vk-IAH.text" = "Hauptgericht";
+
+/* Class = "UILabel"; text = "priceStaff"; ObjectID = "GkS-uz-TMS"; */
+"GkS-uz-TMS.text" = "Preis (Bedienstete)";
+
+/* Class = "UILabel"; text = "Es konnte kein Speiseplan gefunden werden. Wahrscheinlich hat die Mensa geschlossen. Ziehe nach unten, um zu aktualisieren."; ObjectID = "VOJ-UD-1Es"; */
+"VOJ-UD-1Es.text" = "Es konnte kein Speiseplan gefunden werden. Ziehe nach unten, um zu aktualisieren.";
+
+/* Class = "UIButton"; normalTitle = "1.1.1970"; ObjectID = "fCS-9K-gRg"; */
+"fCS-9K-gRg.normalTitle" = "1.1.1970";
+
+/* Class = "UILabel"; text = "priceGuest"; ObjectID = "nra-gk-MTa"; */
+"nra-gk-MTa.text" = "Preis (Gäste)";
+
+/* Class = "UILabel"; text = "priceStud"; ObjectID = "sOQ-wY-ZG0"; */
+"sOQ-wY-ZG0.text" = "Preis (Studierende)";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "tRq-8K-Oxs"; */
+"tRq-8K-Oxs.text" = "Author und Datum";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "xjI-zv-kE1"; */
+"xjI-zv-kE1.text" = "Kommentar";
+
+"vmh-kL-caz.text" = "Es ist Wochenende und die Mensa hat geschlossen!";

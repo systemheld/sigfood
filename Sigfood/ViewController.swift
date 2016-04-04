@@ -83,12 +83,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // no dishes found
         if self.data == [] {
-            let cell = tableView.dequeueReusableCellWithIdentifier("emptyCell")!
+            let cell: UITableViewCell
             let weekday = self.calendar.component(.Weekday, fromDate: self.date)
             if (weekday == 1) || (weekday == 7) {
-                cell.textLabel?.text = "Es ist Wochenende und die Mensa hat geschlossen!"
+                cell = tableView.dequeueReusableCellWithIdentifier("weekendCell")!
             } else {
-                cell.textLabel?.text = "Es konnte kein Speiseplan gefunden werdem. Ziehe nach unten, um zu aktualisieren."
+                cell = tableView.dequeueReusableCellWithIdentifier("emptyCell")!
             }
             return cell
         }
@@ -277,8 +277,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let data = NSData(contentsOfURL: url) else {
             NSOperationQueue.mainQueue().addOperationWithBlock() {
                 SwiftSpinner.hide()
-                let alert = UIAlertController(title: "That escalated quickly", message: "Es gab einen Fehler beim Abruf der Daten von sigfood.de.", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                let alert = UIAlertController(
+                    title: NSLocalizedString("error.httpfetch.title", comment: "There was an error fetching data from sigfood.de (title)"),
+                    message: NSLocalizedString("error.httpfetch.message", comment: "There was an error fetching data from sigfood.de (message)"),
+                    preferredStyle: .Alert
+                )
+                alert.addAction(UIAlertAction(title: NSLocalizedString("error.httpfetch.button", comment: "There was an error fetching data from sigfood.de (Confirm Button)"), style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }
             return
