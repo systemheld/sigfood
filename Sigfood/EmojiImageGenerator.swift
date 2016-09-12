@@ -33,7 +33,7 @@ class EmojiImageGenerator: NSObject {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
     func prohibitedImage(str: String, size: CGFloat) -> UIImage {
@@ -47,6 +47,6 @@ class EmojiImageGenerator: NSObject {
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return newImage
+        return newImage!
     }
 }
