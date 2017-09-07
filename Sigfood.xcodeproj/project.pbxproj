@@ -18,7 +18,6 @@
 		D64065471BFCA5FA00980D11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64065461BFCA5FA00980D11 /* Images.xcassets */; };
 		D640654B1BFCCF8800980D11 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D640654A1BFCCF8800980D11 /* Settings.bundle */; };
 		D64EC81E19E295210091EB1E /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64EC81D19E295210091EB1E /* SWXMLHash.swift */; };
-		D65A57131C05E89E00CC5BD1 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */; };
 		D65A86F51C05BD6E00AD77BA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A86F41C05BD6E00AD77BA /* Log.swift */; };
 		D65A9C8F1CB248AD00F572F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65A9C911CB248AD00F572F9 /* Localizable.strings */; };
 		D69339831BFA0A6B006B6A22 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69339821BFA0A6B006B6A22 /* CommentViewController.swift */; };
@@ -63,7 +62,6 @@
 		D64065461BFCA5FA00980D11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D640654A1BFCCF8800980D11 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D64EC81D19E295210091EB1E /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
-		D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		D65A86F41C05BD6E00AD77BA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D65A9C901CB248AD00F572F9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D65A9C921CB248B600F572F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				D61F7ABE1AA09CEE003E2A3E /* NSString+HTML.m */,
 				D61F7ABB1AA05F57003E2A3E /* String+htmlencodedstring.swift */,
 				D64EC81D19E295210091EB1E /* SWXMLHash.swift */,
-				D65A57121C05E89E00CC5BD1 /* SwiftSpinner.swift */,
 				D65A86F41C05BD6E00AD77BA /* Log.swift */,
 				D61345B01C639CB300524B7F /* EmojiImageGenerator.swift */,
 			);
@@ -255,7 +252,6 @@
 				D65A86F51C05BD6E00AD77BA /* Log.swift in Sources */,
 				D61F7ABC1AA05F57003E2A3E /* String+htmlencodedstring.swift in Sources */,
 				D63B80FD1C0C25C40021AE1B /* Comment+CoreDataProperties.swift in Sources */,
-				D65A57131C05E89E00CC5BD1 /* SwiftSpinner.swift in Sources */,
 				D63B80FC1C0C25C40021AE1B /* Menu.swift in Sources */,
 				D61F7ABF1AA09CEE003E2A3E /* NSString+HTML.m in Sources */,
 				D6FD79F71AA6F119004F233A /* SigfoodCell.swift in Sources */,
