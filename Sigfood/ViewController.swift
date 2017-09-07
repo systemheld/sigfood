@@ -11,6 +11,7 @@
 
 import UIKit
 import CoreData
+import JGProgressHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
     
@@ -32,8 +33,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var data = [Menu]()
     var imageID: Int = 0
     
+    // initialize loading animation bevore first use
+    var loadingAnimation = JGProgressHUD(style: JGProgressHUDStyle.Dark)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -259,7 +264,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // we are going to fetch data, so we give some feedback
         NSOperationQueue.mainQueue().addOperationWithBlock() {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-            SwiftSpinner.show("loading")
+            //SwiftSpinner.show("loading")
+            self.loadingAnimation.showInView(self.view)
         }
         
         let year = NSCalendar.currentCalendar().component(.Year, fromDate: self.date).description
@@ -276,7 +282,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Log("url: \(url)")
         guard let data = NSData(contentsOfURL: url) else {
             NSOperationQueue.mainQueue().addOperationWithBlock() {
-                SwiftSpinner.hide()
+                // SwiftSpinner.hide()
+                self.loadingAnimation.dismissAnimated(true)
                 let alert = UIAlertController(
                     title: NSLocalizedString("error.httpfetch.title", comment: "There was an error fetching data from sigfood.de (title)"),
                     message: NSLocalizedString("error.httpfetch.message", comment: "There was an error fetching data from sigfood.de (message)"),
@@ -399,7 +406,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // disable loading animation
         NSOperationQueue.mainQueue().addOperationWithBlock() {
-            SwiftSpinner.hide()
+            // SwiftSpinner.hide()
+            self.loadingAnimation.dismissAnimated(true)
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }

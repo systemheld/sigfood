@@ -27,8 +27,24 @@
 		D6E9E68519DAC94000BCAD1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9E68419DAC94000BCAD1F /* ViewController.swift */; };
 		D6E9E68819DAC94000BCAD1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9E68619DAC94000BCAD1F /* Main.storyboard */; };
 		D6E9E68D19DAC94000BCAD1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E9E68B19DAC94000BCAD1F /* LaunchScreen.xib */; };
+		D6F2DF511F61345D004EC86D /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F2DF501F61345D004EC86D /* JGProgressHUD.framework */; };
+		D6F2DF521F61345D004EC86D /* JGProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F2DF501F61345D004EC86D /* JGProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6FD79F71AA6F119004F233A /* SigfoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD79F61AA6F119004F233A /* SigfoodCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6F2DF531F61345E004EC86D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6F2DF521F61345D004EC86D /* JGProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D61345B01C639CB300524B7F /* EmojiImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiImageGenerator.swift; sourceTree = "<group>"; };
@@ -62,6 +78,7 @@
 		D6E9E6A619DAC9A700BCAD1F /* ObjC-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-bridge.h"; sourceTree = "<group>"; };
 		D6E9E6C419DACB9D00BCAD1F /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 		D6ECB8581C64C7BF0019EABF /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		D6F2DF501F61345D004EC86D /* JGProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JGProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FD79F61AA6F119004F233A /* SigfoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigfoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F2DF511F61345D004EC86D /* JGProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +125,7 @@
 		D6E9E67419DAC94000BCAD1F = {
 			isa = PBXGroup;
 			children = (
+				D6F2DF501F61345D004EC86D /* JGProgressHUD.framework */,
 				D6E9E68B19DAC94000BCAD1F /* LaunchScreen.xib */,
 				D6E9E68619DAC94000BCAD1F /* Main.storyboard */,
 				D6E9E67F19DAC94000BCAD1F /* Sigfood */,
@@ -159,6 +178,7 @@
 				D6E9E67919DAC94000BCAD1F /* Sources */,
 				D6E9E67A19DAC94000BCAD1F /* Frameworks */,
 				D6E9E67B19DAC94000BCAD1F /* Resources */,
+				D6F2DF531F61345E004EC86D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sigfood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.sigfood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -396,6 +417,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sigfood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-erlangen.rrze.sigfood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
